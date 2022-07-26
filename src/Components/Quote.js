@@ -8,11 +8,11 @@ export default function Quote(){
         .then(res => res.json())
         .then(data => setQuote(data))
     }, [])
-
-    console.log(quote)
+    
     return(
         <div>
             <p>{quote.en}</p>
+            <img src='../assets/desktop/icon-refresh.svg' alt=''/>
             <p>{quote.author}</p>
         </div>
     )
