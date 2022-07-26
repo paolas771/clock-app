@@ -1,9 +1,10 @@
-
+import Quote from './Components/Quote'
 
 export default function App() {
+  
   return (
     <div className="App">
-     hello
+     <Quote />
     </div>
   );
 }
