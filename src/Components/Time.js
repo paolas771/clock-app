@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Time(props){
-    
 
     //get time from string
     var date = new Date(props.time)
@@ -23,6 +22,7 @@ export default function Time(props){
 
     return(
         <div>
+            <img src={(greet == 'good evening') ? '../assets/desktop/icon-moon.svg' : '../assets/desktop/icon-sun.svg'}/>
             <h2>{greet}</h2>
             <h1>{mainTime}<span>{props.abbreviation}</span></h1>
             <h2>in {props.city}, {props.country}</h2>

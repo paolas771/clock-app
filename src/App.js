@@ -3,9 +3,10 @@ import Quote from './Components/Quote'
 import Time from './Components/Time'
 export default function App() {
   const [time, setTime] = React.useState('http://worldtimeapi.org/api/ip')
-  const [location, setLocation] = React.useState('https://api.ipbase.com/json/?apikey=dcTtWFj0pKh4crRKlhKsbJuJi7tGmc4zkDriXu3U')
-  //timer to update the clock every minute
+  const [location, setLocation] = React.useState('http://ipwho.is/')
   const [timer, setTimer] = useState(0)
+  
+  //timer to update the clock every minute
   setTimeout(() => {
     setTimer(timer + 1)
   }, 60000)
@@ -16,12 +17,13 @@ export default function App() {
     .then(info => setTime(info))
   }, [timer])
 
+  //https://ipwhois.io/documentation used this api instead because the one recommended was not giving accurate location
   React.useEffect(() => {
-    fetch('http://ipwho.is')
+    fetch('http://ipwho.is/')
     .then(res => res.json())
     .then(info => setLocation(info))
   }, [])
-  console.log(location)
+
   return (
     <div className="App">
      <Quote />
