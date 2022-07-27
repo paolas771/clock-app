@@ -23,8 +23,9 @@ export default function Time(props){
 
     return(
         <div>
-            {greet}
-            {mainTime}
+            <h2>{greet}</h2>
+            <h1>{mainTime}<span>{props.abbreviation}</span></h1>
+            <h2>in {props.city}, {props.country}</h2>
         </div>
     )
 }
