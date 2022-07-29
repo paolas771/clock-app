@@ -5,9 +5,8 @@ export default function Time(props){
     //get time from string
     var date = new Date(props.time)
     var hour = date.getHours()
-    var localHour = hour - 12
     var minutes = date.getMinutes()
-    var mainTime = [localHour, minutes].join(':')
+    var mainTime = [hour, minutes].join(':')
     
     
     function getGreeting(hour){
