@@ -1,0 +1,44 @@
+$font: 'Inter', sans-serif;
+$text-color: #ffffff;
+$bg-day-mobile: './assets/mobile/bg-image-daytime.jpg';
+$bg-night-mobile: './assets/mobile/bg-image-nighttime.jpg';
+$bg-day-tablet: './assets/tablet/bg-image-daytime.jpg';
+$bg-night-tablet: './assets/tablet/bg-image-nighttime.jpg';
+$bg-day-desktop: './assets/desktop/bg-image-daytime.jpg';
+$bg-night-desktop: './assets/desktop/bg-image-nighttime.jpg';
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1440px;
+
+body{
+    font-family: $font;
+    color: $text-color;
+    margin: 0;
+}
+#root{
+    background-color: rgb(0,0,0, 0.4);
+    height: 100vh;
+}
+.dayTime{
+    height: 100vh;
+    background-image: url($bg-day-mobile);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media(min-width: $tablet-breakpoint){
+        background-image: url($bg-day-tablet);
+    }
+    @media(min-width: $desktop-breakpoint){
+        background-image: url($bg-day-desktop);
+    }
+    
+}
+.nightTime{
+    background-image: url($bg-night-mobile);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media(min-width: $tablet-breakpoint){
+        background-image: url($bg-night-tablet);
+    }
+    @media(min-width: $desktop-breakpoint){
+        background-image: url($bg-night-desktop);
+    }
+}
