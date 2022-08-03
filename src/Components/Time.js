@@ -18,6 +18,14 @@ export default function Time(props){
     }
 
     const greet = getGreeting(hour)
+    //function to get background image depanding on time
+    function bgBody(greet){
+        const bodyClassName = (greet == 'good evening') ? 'nightTime' : 'dayTime'
+        document.body.classList.add(bodyClassName) 
+        bodyClassName == 'nightTime' ? document.body.classList.remove('dayTime') : document.body.classList.remove('nightTime')
+    }
+    
+    bgBody(greet)
 
     return(
         <div>

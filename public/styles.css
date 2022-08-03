@@ -27,6 +27,7 @@ body {
 }
 
 .nightTime {
+  height: 100vh;
   background-image: url("./assets/mobile/bg-image-nighttime.jpg");
   background-size: cover;
   background-repeat: no-repeat;
