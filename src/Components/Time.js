@@ -6,6 +6,9 @@ export default function Time(props){
     var date = new Date(props.time)
     var hour = date.getHours()
     var minutes = date.getMinutes()
+    if(minutes < 10){
+        minutes = '0' + minutes
+    } 
     var mainTime = [hour, minutes].join(':')
     
     
