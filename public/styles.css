@@ -9,6 +9,20 @@ body {
   height: 100vh;
 }
 
+.App {
+  margin-left: 26px;
+}
+@media (min-width: 768px) {
+  .App {
+    margin-left: 64px;
+  }
+}
+@media (min-width: 1440px) {
+  .App {
+    margin-left: 165px;
+  }
+}
+
 .dayTime {
   height: 100vh;
   background-image: url("./assets/mobile/bg-image-daytime.jpg");
@@ -41,6 +55,91 @@ body {
   .nightTime {
     background-image: url("./assets/desktop/bg-image-nighttime.jpg");
   }
+}
+
+.quoteContainer {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  width: 324px;
+  padding-top: 31px;
+}
+@media (min-width: 768px) {
+  .quoteContainer {
+    width: 573px;
+    padding-top: 80px;
+  }
+}
+@media (min-width: 1440px) {
+  .quoteContainer {
+    padding-top: 56px;
+  }
+}
+
+.quote {
+  font-size: 12px;
+  font-size: 400;
+  grid-row: 1/3;
+  line-height: 22px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .quote {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.refreshButton {
+  border: none;
+  background: none;
+}
+
+.author {
+  grid-row: 3;
+  font-weight: 700;
+  line-height: 22px;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .author {
+    font-size: 18px;
+  }
+}
+
+.timeContainer {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 25px auto auto;
+  align-content: center;
+}
+
+.greeting {
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.time {
+  grid-column: 1/3;
+  font-size: 100px;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: -2.5px;
+}
+.time span {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+
+.location {
+  grid-column: 1/3;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 /*# sourceMappingURL=styles.css.map */

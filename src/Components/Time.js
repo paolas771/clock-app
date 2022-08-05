@@ -31,11 +31,11 @@ export default function Time(props){
     bgBody(greet)
 
     return(
-        <div>
-            <img src={(greet == 'good evening') ? '../assets/desktop/icon-moon.svg' : '../assets/desktop/icon-sun.svg'}/>
-            <h2>{greet}</h2>
-            <h1>{mainTime}<span>{props.abbreviation}</span></h1>
-            <h2>in {props.city}, {props.country}</h2>
+        <div className="timeContainer">
+            <img className="sun/moon" src={(greet == 'good evening') ? '../assets/desktop/icon-moon.svg' : '../assets/desktop/icon-sun.svg'}/>
+            <h2 className="greeting">{greet}</h2>
+            <h1 className="time">{mainTime} <span>{props.abbreviation}</span></h1>
+            <h2 className="location">in {props.city}, {props.country}</h2>
         </div>
     )
 }

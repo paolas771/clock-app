@@ -13,10 +13,10 @@ export default function Quote(){
         setUpdate(update + 1)
     }
     return(
-        <div>
-            <button onClick={newQuote}><img src='../assets/desktop/icon-refresh.svg' alt=''/></button>
-            <p>{quote.en}</p>
-            <p>{quote.author}</p>
+        <div className="quoteContainer">
+            <p className="quote">{quote.en}</p>
+            <button onClick={newQuote} className="refreshButton"><img src='../assets/desktop/icon-refresh.svg' alt=''/></button>
+            <p className="author">{quote.author}</p>
         </div>
     )
 }
