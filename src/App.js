@@ -37,7 +37,7 @@ export default function App() {
       city={location.city}
       country={location.country_code}
     />
-    <button onClick={expand}>{expandInfo ? 'Less' : 'More'} <img src={expandInfo ? '../assets/desktop/icon-arrow-up.svg' : '../assets/desktop/icon-arrow-down.svg'} alt=''/></button>
+    <button onClick={expand} className="infoButton"><h3>{expandInfo ? 'Less' : 'More'}</h3> <img src={expandInfo ? '../assets/desktop/icon-arrow-up.svg' : '../assets/desktop/icon-arrow-down.svg'} alt=''/></button>
     {expandInfo && <MoreInfo 
       timeZone={time.timezone}
       yearDay={time.day_of_year}
