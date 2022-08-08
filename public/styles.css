@@ -29,6 +29,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.dayTime .infoSection {
+  background: rgba(255, 255, 255, 0.75);
+}
+.dayTime .infoName, .dayTime .infoValue {
+  color: #303030;
+}
 @media (min-width: 768px) {
   .dayTime {
     background-image: url("./assets/tablet/bg-image-daytime.jpg");
@@ -45,6 +51,12 @@ body {
   background-image: url("./assets/mobile/bg-image-nighttime.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+.nightTime .infoSection {
+  background: rgba(0, 0, 0, 0.75);
+}
+.nightTime .infoName, .nightTime .infoValue {
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .nightTime {
@@ -108,7 +120,7 @@ body {
 
 .timeContainer {
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 40px auto;
   grid-template-rows: 25px auto auto;
   align-content: center;
 }
@@ -120,6 +132,16 @@ body {
   letter-spacing: 3px;
   margin-top: auto;
   margin-bottom: auto;
+}
+@media (min-width: 768px) {
+  .greeting {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1440px) {
+  .greeting {
+    font-size: 20px;
+  }
 }
 
 .time {
@@ -134,12 +156,157 @@ body {
   font-weight: 300;
   letter-spacing: 0;
 }
+@media (min-width: 768px) {
+  .time {
+    font-size: 175px;
+  }
+  .time span {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1440px) {
+  .time {
+    font-size: 200px;
+  }
+  .time span {
+    font-size: 40px;
+  }
+}
 
 .location {
   grid-column: 1/3;
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+@media (min-width: 768px) {
+  .location {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1440px) {
+  .location {
+    font-size: 24px;
+  }
+}
+
+.infoButton {
+  width: 115px;
+  height: 39px;
+  border-radius: 28px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .infoButton {
+    width: 146px;
+    height: 56px;
+  }
+}
+.infoButton h3 {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 3.75px;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+@media (min-width: 768px) {
+  .infoButton h3 {
+    font-size: 16px;
+    letter-spacing: 5px;
+    line-height: 28px;
+    margin-left: 15px;
+  }
+}
+.infoButton img {
+  width: 32px;
+  height: 32px;
+}
+@media (min-width: 768px) {
+  .infoButton img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.infoSection {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  align-content: center;
+  backdrop-filter: blur(40.7742px);
+  margin-left: -26px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.infoSection .infoName {
+  font-size: 10px;
+  letter-spacing: 2px;
+  line-height: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.infoSection .infoValue {
+  font-size: 20px;
+  text-align: right;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media (min-width: 768px) {
+  .infoSection {
+    margin-left: -64px;
+  }
+  .infoSection .infoName {
+    font-size: 13px;
+    letter-spacing: 2.6px;
+    margin-top: 48px;
+    margin-bottom: 0;
+  }
+  .infoSection .infoValue {
+    text-align: left;
+    font-size: 40px;
+  }
+  .infoSection .timezoneValue {
+    grid-row: 2/3;
+  }
+  .infoSection .weekDayValue {
+    grid-row: 4/5;
+  }
+}
+@media (min-width: 1440px) {
+  .infoSection {
+    margin-left: -165px;
+    padding-left: 165px;
+    grid-template-columns: 580px auto;
+    justify-content: start;
+  }
+  .infoSection .infoName {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+  .infoSection .infoValue {
+    font-size: 56px;
+  }
+  .infoSection .weekDay {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .infoSection .weekDayValue {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .infoSection .yearDay {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .infoSection .yearDayValue {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
