@@ -7,6 +7,7 @@ export default function App() {
   const [location, setLocation] = React.useState('http://ipwho.is/')
   const [timer, setTimer] = useState(0)
   const [expandInfo, setExpandInfo] = React.useState(false)
+  const [windowSize, setWindowSize] = React.useState(window.innerWidth)
   //timer to update the clock every minute
   setTimeout(() => {
     setTimer(timer + 1)
@@ -24,9 +25,16 @@ export default function App() {
     .then(res => res.json())
     .then(info => setLocation(info))
   }, [])
+  React.useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWindowSize(window.innerWidth)
+    })
+  }, [])
   function expand(){
     setExpandInfo(prev => !prev)
   }
+
+
   
   return (
     <div className="App">
@@ -36,6 +44,8 @@ export default function App() {
       abbreviation={time.abbreviation}
       city={location.city}
       country={location.country_code}
+      width={windowSize}
+      info={expandInfo}
     />
     <button onClick={expand} className="infoButton"><h3>{expandInfo ? 'Less' : 'More'}</h3> <img src={expandInfo ? '../assets/desktop/icon-arrow-up.svg' : '../assets/desktop/icon-arrow-down.svg'} alt=''/></button>
     {expandInfo && <MoreInfo 
@@ -43,6 +53,7 @@ export default function App() {
       yearDay={time.day_of_year}
       weekDay={time.day_of_week}
       weekNumber={time.week_number}
+      width={windowSize}
     />}
     </div>
   );

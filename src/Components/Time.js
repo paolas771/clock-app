@@ -19,7 +19,6 @@ export default function Time(props){
        
         return greeting
     }
-
     const greet = getGreeting(hour)
     //function to get background image depanding on time
     function bgBody(greet){
@@ -27,13 +26,20 @@ export default function Time(props){
         document.body.classList.add(bodyClassName) 
         bodyClassName == 'nightTime' ? document.body.classList.remove('dayTime') : document.body.classList.remove('nightTime')
     }
-    
+    const styles375 = {
+        paddingTop: (props.info) ? "99px" : "226px"
+    }
+    const styles768 = {
+        paddingTop: (props.info) ? "153px" : "388px"
+    }
+    const styles1440 = {
+        paddingTop: (props.info) ? "56px" : "233px"
+    }
     bgBody(greet)
-
     return(
-        <div className="timeContainer">
+        <div className="timeContainer" style={props.width <= 768 ? styles375 : props.width <= 1440 ? styles768 : styles1440}>
             <img className="sun/moon" src={(greet == 'good evening') ? '../assets/desktop/icon-moon.svg' : '../assets/desktop/icon-sun.svg'}/>
-            <h2 className="greeting">{greet}</h2>
+            <h2 className="greeting">{greet}{props.width > 375 && ", it's currently"}</h2>
             <h1 className="time">{mainTime} <span>{props.abbreviation}</span></h1>
             <h2 className="location">in {props.city}, {props.country}</h2>
         </div>

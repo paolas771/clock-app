@@ -35,6 +35,10 @@ body {
 .dayTime .infoName, .dayTime .infoValue {
   color: #303030;
 }
+.dayTime hr {
+  background: #303030;
+  opacity: 0.25;
+}
 @media (min-width: 768px) {
   .dayTime {
     background-image: url("./assets/tablet/bg-image-daytime.jpg");
@@ -57,6 +61,10 @@ body {
 }
 .nightTime .infoName, .nightTime .infoValue {
   color: #ffffff;
+}
+.nightTime hr {
+  background: #ffffff;
+  opacity: 0.25;
 }
 @media (min-width: 768px) {
   .nightTime {
@@ -123,6 +131,7 @@ body {
   grid-template-columns: 40px auto;
   grid-template-rows: 25px auto auto;
   align-content: center;
+  position: relative;
 }
 
 .greeting {
@@ -199,11 +208,22 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 48px;
 }
 @media (min-width: 768px) {
   .infoButton {
     width: 146px;
     height: 56px;
+    margin-top: 80px;
+  }
+}
+@media (min-width: 1440px) {
+  .infoButton {
+    float: right;
+    margin-right: 165px;
+    margin-top: -70px;
+    position: relative;
+    z-index: 1;
   }
 }
 .infoButton h3 {
@@ -240,8 +260,12 @@ body {
   align-content: center;
   backdrop-filter: blur(40.7742px);
   margin-left: -26px;
+  margin-top: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .infoSection .infoName {
   font-size: 10px;
@@ -259,6 +283,7 @@ body {
 @media (min-width: 768px) {
   .infoSection {
     margin-left: -64px;
+    margin-top: 64px;
   }
   .infoSection .infoName {
     font-size: 13px;
@@ -281,23 +306,37 @@ body {
   .infoSection {
     margin-left: -165px;
     padding-left: 165px;
-    grid-template-columns: 580px auto;
+    padding-top: 74px;
+    grid-template-columns: 580px auto auto;
+    grid-template-rows: 28px 110px 28px 110px;
     justify-content: start;
+    column-gap: 94px;
+  }
+  .infoSection hr {
+    grid-row: 1/4;
+    grid-column: 2/3;
+    height: 252px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .infoSection .infoName {
     font-size: 15px;
     letter-spacing: 3px;
+    margin-top: 0;
   }
   .infoSection .infoValue {
     font-size: 56px;
   }
   .infoSection .weekDay {
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: 1/2;
   }
   .infoSection .weekDayValue {
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: 2/3;
+  }
+  .infoSection .weekNumValue {
+    grid-column: 3/4;
   }
   .infoSection .yearDay {
     grid-row: 3/4;
