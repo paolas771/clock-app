@@ -19,7 +19,7 @@ body {
 }
 @media (min-width: 1440px) {
   .App {
-    margin-left: 165px;
+    margin-left: 0;
   }
 }
 
@@ -92,6 +92,7 @@ body {
 @media (min-width: 1440px) {
   .quoteContainer {
     padding-top: 56px;
+    margin-left: 165px;
   }
 }
 
@@ -132,6 +133,11 @@ body {
   grid-template-rows: 25px auto auto;
   align-content: center;
   position: relative;
+}
+@media (min-width: 1440px) {
+  .timeContainer {
+    margin-left: 165px;
+  }
 }
 
 .greeting {
@@ -259,13 +265,13 @@ body {
   justify-content: space-around;
   align-content: center;
   backdrop-filter: blur(40.7742px);
-  margin-left: -26px;
   margin-top: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  right: 0;
+  left: 0;
 }
 .infoSection .infoName {
   font-size: 10px;
@@ -304,7 +310,7 @@ body {
 }
 @media (min-width: 1440px) {
   .infoSection {
-    margin-left: -165px;
+    margin-left: 0;
     padding-left: 165px;
     padding-top: 74px;
     grid-template-columns: 580px auto auto;

@@ -23,8 +23,8 @@ body{
     @media(min-width: $tablet-breakpoint){
         margin-left: 64px;
     }
-    @media(min-width: $desktop-breakpoint){
-        margin-left: 165px;
+   @media(min-width: $desktop-breakpoint){
+        margin-left: 0;
     }
 }
 .dayTime{
@@ -83,6 +83,7 @@ body{
     }
     @media(min-width: $desktop-breakpoint){
         padding-top: 56px;
+        margin-left: 165px;
     }
 }
 .quote{
@@ -115,6 +116,10 @@ body{
     grid-template-rows: 25px auto auto;
     align-content: center;
     position: relative;
+    @media(min-width: $desktop-breakpoint){
+      margin-left: 165px;  
+    }
+    
 }
 .greeting{
     font-size: 15px;
@@ -178,7 +183,6 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-top: 48px;
-
     @media(min-width: $tablet-breakpoint){
         width: 146px;
         height: 56px;
@@ -213,20 +217,22 @@ body{
             height: 40px;
         }
     }
+    
 }
+
 .infoSection{
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-around;
     align-content: center;
     backdrop-filter: blur(40.7742px);
-    margin-left: -26px;
     margin-top: 40px;
     padding-top: 48px;
     padding-bottom: 48px;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    right: 0;
+    left: 0;
     .infoName{
         font-size: 10px;
         letter-spacing: 2px;
@@ -261,7 +267,7 @@ body{
         }
     }
     @media(min-width: $desktop-breakpoint){
-        margin-left: -165px;
+        margin-left: 0;
         padding-left: 165px;
         padding-top: 74px;
         grid-template-columns: 580px auto auto;

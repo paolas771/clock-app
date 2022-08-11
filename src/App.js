@@ -19,7 +19,7 @@ export default function App() {
     .then(info => setTime(info))
   }, [timer])
 
-  //https://ipwhois.io/documentation used this api instead because the one recommended was not giving accurate location
+  //https://ipwhois.io/documentation used this api instead because the one recommended was not giving accurate location <path stroke="#FFF" stroke-width="2" d="M14 23l6-6 6 6" />
   React.useEffect(() => {
     fetch('http://ipwho.is/')
     .then(res => res.json())
@@ -47,7 +47,7 @@ export default function App() {
       width={windowSize}
       info={expandInfo}
     />
-    <button onClick={expand} className="infoButton"><h3>{expandInfo ? 'Less' : 'More'}</h3> <img src={expandInfo ? '../assets/desktop/icon-arrow-up.svg' : '../assets/desktop/icon-arrow-down.svg'} alt=''/></button>
+    <button onClick={expand} className="infoButton"><h3>{expandInfo ? 'Less' : 'More'}</h3> <img className="arrowsvg" src={expandInfo ? '../assets/desktop/icon-arrow-up.svg' : '../assets/desktop/icon-arrow-down.svg'} alt=''/></button>
     {expandInfo && <MoreInfo 
       timeZone={time.timezone}
       yearDay={time.day_of_year}
