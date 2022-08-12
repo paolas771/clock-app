@@ -37,7 +37,7 @@ export default function Time(props){
     }
     bgBody(greet)
     return(
-        <div className="timeContainer" style={props.width <= 768 ? styles375 : props.width <= 1440 ? styles768 : styles1440}>
+        <div className="timeContainer" style={props.width <= 768 ? styles375 : props.width <= 1275 ? styles768 : styles1440}>
             <img className="sun/moon" src={(greet == 'good evening') ? '../assets/desktop/icon-moon.svg' : '../assets/desktop/icon-sun.svg'}/>
             <h2 className="greeting">{greet}{props.width > 375 && ", it's currently"}</h2>
             <h1 className="time">{mainTime} <span>{props.abbreviation}</span></h1>
